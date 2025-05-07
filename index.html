@@ -5,37 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Health Connect</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      padding: 0;
+      padding: 20px;
       background: #f0f4f8;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
     }
 
     .container {
       background: white;
-      padding: 40px;
+      padding: 30px 20px;
       border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      max-width: 400px;
-      width: 80%;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      width: 100%;
+      max-width: 360px;
       text-align: center;
     }
 
     h1 {
-      margin-bottom: 10px;
-      font-size: 2.5rem;
+      font-size: 2rem;
       color: #2a4365;
+      margin-bottom: 8px;
     }
 
     h3 {
-      margin-bottom: 30px;
-      font-weight: bold;
+      font-size: 1rem;
       color: #4a5568;
+      margin-bottom: 25px;
+      font-weight: normal;
     }
 
     select {
@@ -52,12 +57,24 @@
     select:focus {
       border-color: #3182ce;
     }
+
+    @media (max-width: 340px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+      h3 {
+        font-size: 0.95rem;
+      }
+      .container {
+        padding: 25px 15px;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Welcome to Health Connect</h1>
-    <h3>What's wrong ?</h3>
+    <h3>What's wrong with you? (select below)</h3>
     <select>
       <option disabled selected>Select your condition</option>
       <option>Headache</option>
